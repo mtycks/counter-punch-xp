@@ -2,10 +2,10 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `PopFlyXP`,
+    title: `CounterpunchXP`,
     description: `Digital Brand Development Platform for Baseball Players.`,
-    author: `@popflyxp`,
-    siteUrl: `https://popflyxp.com`
+    author: `@counterpunchxp`,
+    siteUrl: `https://counterpunchxp.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

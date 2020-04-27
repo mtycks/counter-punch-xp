@@ -1,3 +1,7 @@
+#___gatsby{
+  overflow:hidden;
+}
+
 ::selection{
   background-color:#aceb2f;
   color:#FFFFFF;
@@ -25,8 +29,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .btn-primary{
-  background-color:rgb(240, 60, 71);
-  border-color:rgb(240, 60, 71);
+  background-color:#cf0015;
+  border-color:#cf0015;
   color:#FFFFFF;
 }
 

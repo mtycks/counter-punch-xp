@@ -8,7 +8,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const indexHeader = `Bringing fans and<br />players together`;
+const indexHeader = `Bringing fans and<br />boxers together`;
 
 
 
@@ -16,10 +16,10 @@ const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
   query HomepageQuery {
-    comingsoon: file(absolutePath: { regex: "/comingsoonpopfly.jpg/" }) {
+    comingsoon: file(absolutePath: { regex: "/counterpunch-coming-soon4.png/" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -123,9 +123,9 @@ const IndexPage = () => {
       <SEO title="Home" />
 
       <Container>
-        <Row className="pt-5 pb-5">
+        <Row className="pt-5">
           <Col lg={{size:"5", order:"1"}} xs={{size: "12", order:"2"}}>
-            <h2>POPFLYXP</h2>
+            <h2>COUNTERPUNCH XP</h2>
             <p className="lead"><em>Is a Digital Brand Development Platform for Baseball Players. Its roster of athletes includes Active Players as well as Legends of the Game. PFXP's mission is to bring fans closer to their favorite player.</em></p>
             <p>In an era where Content is The Castle and the Audience is the King, we have created an Athlete Engagement Platform where Fans can find all the authentic content, relevant information and day to day perspective of the favorite Players in the game.</p>
             <p><Link to="/team" className="btn btn-primary">Our Team</Link></p>
@@ -139,7 +139,7 @@ const IndexPage = () => {
       <div className="hp-app text-center pb-5 pt-5">
 
             <h2 className="text-uppercase">App Design</h2>
-            <p><em>PopFlyXp has all the exclusive content of your favorite athletes.</em></p>
+            <p><em>CounterpunchXP has all the exclusive content of your favorite athletes.</em></p>
 
             <div className="slick-container text-center">
 

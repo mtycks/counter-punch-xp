@@ -18,7 +18,7 @@ const Layout = ({ children, header, headerTitle }) => {
           description
         }
       }
-      white_logo: file(absolutePath: { regex: "/whitelogo3.png/" }) {
+      white_logo: file(absolutePath: { regex: "/whitelogo-ph2.png/" }) {
         childImageSharp {
           fluid(maxWidth: 250, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -32,14 +32,14 @@ const Layout = ({ children, header, headerTitle }) => {
           }
         }
       }
-      header_bg_short: file(absolutePath: { regex: "/interior-bg.png/" }) {
+      header_bg_short: file(absolutePath: { regex: "/interior-bg.jpg/" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      phones: file(absolutePath: { regex: "/celulares.png/" }) {
+      phones: file(absolutePath: { regex: "/celulares2.png/" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -73,7 +73,7 @@ const Layout = ({ children, header, headerTitle }) => {
                         <Link to="/" activeClassName="active">Home</Link>
                       </NavItem>
                       <NavItem>
-                        <Link to="/players" activeClassName="active">Players</Link>
+                        <Link to="/boxers" activeClassName="active">Boxers</Link>
                       </NavItem>
                       <NavItem>
                         <Link to="/team" activeClassName="active">Team</Link>
@@ -106,7 +106,7 @@ const Layout = ({ children, header, headerTitle }) => {
                 <Row>
                   <Col xl={{size:"7", offset:"0"}} lg={{size:"6", offset: "0"}} md={{size:"8", offset:"2"}} sm={{size:"12", offset:"0"}} xs={{size:"12", offset: "0"}} className="tall-header-text">
                     <h1 dangerouslySetInnerHTML={{ __html: headerTitle }} />
-                    <Link to="/players" className="btn btn-primary">Our Players</Link>
+                    <Link to="/players" className="btn btn-primary">Our Boxers</Link>
                   </Col>
                   <Col xl={{size:"5", offset: "0"}} lg={{size:"6", offset: "0"}} md={{size:"6", offset: "3"}} xs={{size:"8", offset:"2"}}>
                     <Img fluid={data.phones.childImageSharp.fluid} />
@@ -147,7 +147,7 @@ const Layout = ({ children, header, headerTitle }) => {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/players">Players</Link>
+                  <Link to="/boxers">Boxers</Link>
                 </li>
                 <li>
                   <Link to="/team">Team</Link>
