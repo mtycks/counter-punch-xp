@@ -30,55 +30,69 @@ const IndexPage = () => {
         }
       }
     }
-    phoneFrame: file(absolutePath: { regex: "/frame-slider.png/" }) {
+    mockup1: file(absolutePath: { regex: "/mockup-app-principal.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }  
+    mockup2: file(absolutePath: { regex: "/mockup-approach.png/" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     } 
-    phoneFrame1: file(absolutePath: { regex: "/frame-slider-1.png/" }) {
+    mockup3: file(absolutePath: { regex: "/mockup-lifestyle.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }  
+    mockup4: file(absolutePath: { regex: "/mockup-principal-2.png/" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     } 
-    phoneFrame2: file(absolutePath: { regex: "/frame-slider-2.png/" }) {
+    mockup5: file(absolutePath: { regex: "/mockup-round.png/" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     } 
-    phoneFrame3: file(absolutePath: { regex: "/frame-slider-3.png/" }) {
+    mockup6: file(absolutePath: { regex: "/mockup-splash-principal.png/" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     } 
-    phoneFrame4: file(absolutePath: { regex: "/frame-slider-4.png/" }) {
+    mockup7: file(absolutePath: { regex: "/mockup-splash-round.png/" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     } 
-    phoneFrame5: file(absolutePath: { regex: "/frame-slider-5.png/" }) {
+    mockup8: file(absolutePath: { regex: "/mockup-splash-secundario.png/" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     } 
-    phoneFrame6: file(absolutePath: { regex: "/frame-slider-6.png/" }) {
+    mockup9: file(absolutePath: { regex: "/mockup-support.png/" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
-    }    
+    }  
   }
   `)
 
@@ -96,25 +110,28 @@ const IndexPage = () => {
       {
         breakpoint: 1560,
         settings: {
-          slidesToShow:3
+          slidesToShow:5
         }
       },
       {
         breakpoint: 1100,
         settings: {
-          slidesToShow:1
+          slidesToShow:3
         }
       }
   ]
   };
 
   const appImages = [
-    data.phoneFrame1.childImageSharp.fluid,
-    data.phoneFrame2.childImageSharp.fluid,
-    data.phoneFrame3.childImageSharp.fluid,
-    data.phoneFrame4.childImageSharp.fluid,
-    data.phoneFrame5.childImageSharp.fluid,
-    data.phoneFrame6.childImageSharp.fluid
+    data.mockup1.childImageSharp.fluid,
+    data.mockup2.childImageSharp.fluid,
+    data.mockup3.childImageSharp.fluid,
+    data.mockup4.childImageSharp.fluid,
+    data.mockup5.childImageSharp.fluid,
+    data.mockup6.childImageSharp.fluid,
+    data.mockup7.childImageSharp.fluid,
+    data.mockup8.childImageSharp.fluid,
+    data.mockup9.childImageSharp.fluid
   ];
 
   return(
@@ -139,13 +156,9 @@ const IndexPage = () => {
       <div className="hp-app text-center pb-5 pt-5">
 
             <h2 className="text-uppercase">App Design</h2>
-            <p><em>CounterpunchXP has all the exclusive content of your favorite athletes.</em></p>
+            <p><em>CounterPunchXP has all the exclusive content of your favorite athletes.</em></p>
 
             <div className="slick-container text-center">
-
-              <div className="frame-holder">
-                <Img fluid={data.phoneFrame.childImageSharp.fluid} style={{minWidth:"450px", display:'inline-block'}} />
-              </div>
 
               <Slider {...settings}>
                 
@@ -159,9 +172,11 @@ const IndexPage = () => {
                   })}
 
               </Slider>
-            </div>
 
+            </div>
       </div>
+
+      <p className="text-center"><small><em>Images are for illustrative purposes only.</em></small></p>
 
       <Container>
         <Row className="pt-5 pb-5">
