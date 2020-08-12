@@ -16,14 +16,14 @@ const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
   query HomepageQuery {
-    comingsoon: file(absolutePath: { regex: "/counterpunch-coming-soon4.png/" }) {
+    comingsoon: file(absolutePath: { regex: "/counterpunch-coming-soon5.png/" }) {
       childImageSharp {
         fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    eltitan: file(absolutePath: { regex: "/logotitanOPT.png/" }) {
+    logojm: file(absolutePath: { regex: "/logojm.png/" }) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
@@ -143,8 +143,8 @@ const IndexPage = () => {
         <Row className="pt-5">
           <Col lg={{size:"5", order:"1"}} xs={{size: "12", order:"2"}}>
             <h2>COUNTERPUNCH XP</h2>
-            <p className="lead"><em>Is a Digital Brand Development Platform for Baseball Players. Its roster of athletes includes Active Players as well as Legends of the Game. PFXP's mission is to bring fans closer to their favorite player.</em></p>
-            <p>In an era where Content is The Castle and the Audience is the King, we have created an Athlete Engagement Platform where Fans can find all the authentic content, relevant information and day to day perspective of the favorite Players in the game.</p>
+            <p className="lead"><em>Is a Digital Brand Development Platform for professional boxers. Its roster of athletes includes active boxers as well as Legends of the Ring. CPXP's mission is to bring fans closer to their favorite boxer.</em></p>
+            <p>In an era where Content is The Castle and the Audience is the King, we have created an Athlete Engagement Platform where Fans can find all the authentic content, relevant information and day to day perspective of the favorite boxers in the game.</p>
             <p><Link to="/team" className="btn btn-primary">Our Team</Link></p>
           </Col>
           <Col lg={{offset:"1", size:"6", order:"2"}} xs={{size:"12", offset:"0", order:"1"}}>
@@ -181,8 +181,8 @@ const IndexPage = () => {
       <Container>
         <Row className="pt-5 pb-5">
           <Col xs="12" className="text-center">
-            <h2 className="text-uppercase">Download Your Favorite Player's App</h2>
-            <p><Link to="/players"><Img fluid={data.eltitan.childImageSharp.fluid} style={{minWidth: '200px', maxWidth:'200px', display:'inline-block'}} /></Link></p>
+            <h2 className="text-uppercase">Download Your Favorite Boxers's App</h2>
+            <p><Link to="/boxers"><Img fluid={data.logojm.childImageSharp.fluid} style={{minWidth: '200px', maxWidth:'200px', display:'inline-block'}} /></Link></p>
           </Col>
         </Row>
       </Container>

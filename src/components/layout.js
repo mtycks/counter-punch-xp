@@ -39,7 +39,7 @@ const Layout = ({ children, header, headerTitle }) => {
           }
         }
       }
-      phones: file(absolutePath: { regex: "/celulares2.png/" }) {
+      phones: file(absolutePath: { regex: "/hp_hero_mockup.png/" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp

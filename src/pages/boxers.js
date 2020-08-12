@@ -16,7 +16,7 @@ const PlayersPage = () => {
         }
       }
     }
-    eltitan: file(absolutePath: { regex: "/logotitanOPT.png/" }) {
+    logojm: file(absolutePath: { regex: "/logojm.png/" }) {
       childImageSharp {
         fluid(maxWidth: 300, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
@@ -50,11 +50,11 @@ const PlayersPage = () => {
           <Col md={{size:"10", offset:"1"}} lg={{size:"8", offset:"2"}}>
             <Row>
               <Col xs={{size:"6", offset:"3"}} md={{size:"4", offset:"1"}} className="text-center">
-                <p><Img fluid={data.eltitan.childImageSharp.fluid} style={{width:'100%', display:'inline-block'}} /></p>
+                <p><Img fluid={data.logojm.childImageSharp.fluid} style={{width:'100%', display:'inline-block'}} /></p>
               </Col>
               <Col md="6" className="text-center">
-                <h2 className="text-uppercase">El Titan</h2>
-                <p>Professional Baseball First Baseman who is currently a free agent. Previously played for the Texas Rangers, San Diego Padres, Boston Red Sox, Los Angeles Dodgers and the New York Mets. El Titán is one of the most decorated Mexican American Players in MLB history as 5x All Star, 2x Silver Slugger Award Winner, and 4x Gold Glove Award Winner.</p>
+                <h2 className="text-uppercase">Jaime Munguía</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <p>
                   <a href="https://apps.apple.com/us/app/titan23/id1454549170"><Img fluid={data.apple.childImageSharp.fluid} style={{minWidth:'150px', display:'inline-block'}} /></a>
                   <a href="https://play.google.com/store/apps/details?id=com.titan23"><Img fluid={data.google.childImageSharp.fluid} style={{minWidth:'150px',display:'inline-block'}} /></a>
