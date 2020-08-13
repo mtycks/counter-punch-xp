@@ -62,9 +62,9 @@ const Layout = ({ children, header, headerTitle }) => {
             <Row>
               <Col>
               
-                <Navbar color="faded" dark expand="lg">
+                <Navbar color="faded" dark expand="md">
                   <Link href="/" className="navbar-brand mr-auto">
-                    <Img fluid={data.white_logo.childImageSharp.fluid} imgStyle={{objectFit: "contain",objectPosition: "50% 50%",}} style={{minWidth: "250px", display: "inline-block"}} />
+                    <Img fluid={data.white_logo.childImageSharp.fluid} imgStyle={{objectFit: "contain",objectPosition: "50% 50%",}} />
                   </Link>
                   <NavbarToggler onClick={toggleNavbar} className="mr-2" />
                   <Collapse isOpen={!collapsed} navbar>
@@ -79,7 +79,7 @@ const Layout = ({ children, header, headerTitle }) => {
                         <Link to="/team" activeClassName="active">Team</Link>
                       </NavItem>
                       <NavItem>
-                        <Link to="/shop" activeClassName="active">Shop</Link>
+                        <a href="https://shop.counterpunchxp.com/">Shop</a>
                       </NavItem>
                       <NavItem>
                         <Link to="/contact" activeClassName="active">Contact</Link>
